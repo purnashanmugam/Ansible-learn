@@ -1,0 +1,5 @@
+---
+- name: running python file
+  command: python  /root/madhan/kumar/sample.py
+  register: out
+- debug: var=out.stdout_lines

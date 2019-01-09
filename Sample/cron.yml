@@ -1,0 +1,9 @@
+---
+- name: install wget
+  hosts: all
+  tasks:
+    - cron: 
+        name: "Example cron"
+        user: "root"
+        minute: "*/10"
+        job: "python  /root/madhan/kumar/sample2.py this is sample of sys args"
