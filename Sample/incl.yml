@@ -1,5 +1,14 @@
 ---
-- name: running python file
-  command: python  /root/madhan/kumar/sample.py
-  register: out
-- debug: var=out.stdout_lines
+#- hosts: ubuntu_hosts
+  #remote_user: root
+
+# tasks:
+# - name: find disk space available.
+#   command: df -hPT
+
+  - name: Install git
+    become: yes
+    apt:
+      name: git
+      state: present
+      update_cache: yes
